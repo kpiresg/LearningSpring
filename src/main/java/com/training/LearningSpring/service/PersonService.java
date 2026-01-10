@@ -20,12 +20,16 @@ public class PersonService {
     return personRepository.save(person);
   }
 
-  public void deletePerson(Person person) {
-    personRepository.delete(person);
+  public void deletePersonById(Long id) {
+    personRepository.deleteById(id);
   }
 
   public List<Person> findAll() {
     return personRepository.findAll();
+  }
+
+  public void updatePerson(Person person) {
+    personRepository.save(person);
   }
 
 }
