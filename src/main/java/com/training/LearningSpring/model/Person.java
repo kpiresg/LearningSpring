@@ -19,8 +19,21 @@ public class Person {
   private Long id;
   private String name;
   private int age;
-  private String profission;
+  private String profession;
 
+  public Long getId() {
+    return id;
+  }
 
+  public String getName() {
+    return name;
+  }
 
+  public int getAge() {
+    return age;
+  }
+
+  public String getProfession() {
+    return profession;
+  }
 }
