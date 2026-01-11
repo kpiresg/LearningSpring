@@ -34,6 +34,12 @@ public class PersonController {
     return new ResponseEntity<List>(persons, HttpStatus.OK);
   }
 
+  @GetMapping("/find/{id}")
+  public ResponseEntity<Person> findById(@PathVariable Long id) {
+    Person person = personService.getById(id);
+    return new ResponseEntity<>(person, HttpStatus.OK);
+  }
+
   @PostMapping("/add")
   public ResponseEntity<Person> addPerson(@RequestBody Person person) {
     personService.addPerson(person);

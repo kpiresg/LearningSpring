@@ -28,6 +28,10 @@ public class PersonService {
     return personRepository.findAll();
   }
 
+  public Person getById(Long id) {
+    return personRepository.findById(id).get();
+  }
+
   public void updatePerson(Person person) {
     personRepository.save(person);
   }
