@@ -1,5 +1,6 @@
 package com.training.LearningSpring.service;
 
+import com.training.LearningSpring.exception.NotFoundPersonException;
 import com.training.LearningSpring.model.Person;
 import com.training.LearningSpring.repository.PersonRepository;
 import java.util.List;
@@ -29,7 +30,8 @@ public class PersonService {
   }
 
   public Person getById(Long id) {
-    return personRepository.findById(id).get();
+    return personRepository.findById(id)
+        .orElseThrow(() -> new NotFoundPersonException("Pessoa com o ID " + id + " não encontrada"));
   }
 
   public void updatePerson(Person person) {
