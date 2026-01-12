@@ -1,3 +1,3 @@
-INSERT INTO tb_person (name, age, profession) VALUES ('Kauan', 18, 'Java Dev')
-INSERT INTO tb_person (name, age, profession) VALUES ('Laura', 16, 'Psicologa')
-INSERT INTO tb_person (name, age, profession) VALUES ('Tamires', 18, 'Empresaria')
+INSERT INTO tb_person (name, age, profession, password) VALUES ('Kauan', 18, 'Java Dev', '123')
+INSERT INTO tb_person (name, age, profession, password) VALUES ('Laura', 16, 'Psicologa', '456')
+INSERT INTO tb_person (name, age, profession, password) VALUES ('Tamires', 18, 'Empresaria', '321')

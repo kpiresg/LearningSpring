@@ -20,6 +20,7 @@ public class Person {
   private String name;
   private int age;
   private String profession;
+  private String password;
 
   public Long getId() {
     return id;
@@ -35,5 +36,9 @@ public class Person {
 
   public String getProfession() {
     return profession;
+  }
+
+  public String getPassword() {
+    return password;
   }
 }
