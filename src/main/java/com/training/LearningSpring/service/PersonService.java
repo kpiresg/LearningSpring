@@ -22,7 +22,9 @@ public class PersonService {
   }
 
   public void deletePersonById(Long id) {
-    personRepository.deleteById(id);
+    personRepository.findById(id)
+      .orElseThrow(() -> new NotFoundPersonException("Person with id " + id + " not exists"));
+      personRepository.deleteById(id);
   }
 
   public List<Person> findAll() {
